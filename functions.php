@@ -4,10 +4,6 @@
 if ( function_exists('register_sidebar') )
     register_sidebar();
 
-//Add support for WordPress 3.0's custom menus
-add_action( 'init', 'register_my_menu' );
-
-
 //Enable css media queries in older browsers
 // function mediaqueries() {
 //     wp_enqueue_script('mediaqueries',
@@ -26,6 +22,7 @@ function register_my_menu() {
         )
     );
 }
+add_action( 'init', 'register_my_menu' );
 
 //Enable post and comments RSS feed links to head
 add_theme_support( 'automatic-feed-links' );
