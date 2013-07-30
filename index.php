@@ -29,13 +29,13 @@
                 </section>
                 
                 <footer class="article-footer">
-                
-                	<p class="categories"><?php the_category(', ') ?></p>
 
-    				<p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
+                    <p class="categories"><?php the_category(', ') ?></p>
 
-				</footer>
-                
+                    <p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
+
+                </footer>
+
             </article>
     
             <?php endwhile; ?>

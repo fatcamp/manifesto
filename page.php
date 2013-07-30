@@ -25,9 +25,9 @@
                 <p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
 
             </footer>
-            
-			<?php comments_template(); ?>
-            
+
+            <?php comments_template(); ?>
+
         </article>
 		
 		<?php endwhile; ?>
