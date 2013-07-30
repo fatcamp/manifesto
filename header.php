@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<title><?php wp_title (); ?></title>
+	<title><?php bloginfo('name'); ?> &#124; <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -26,7 +26,7 @@
     
     	<div id="header-inner">
         
-            <h1 id="logo"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+            <a id="logo" href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" /></a>
         
             <?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'menu_class' => 'nav', 'theme_location' => 'primary-menu' ) ); ?>
             

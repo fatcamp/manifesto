@@ -8,7 +8,7 @@
             
             <header class="article-header">
     
-                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
                 
         	</header>
         
@@ -26,17 +26,12 @@
 
             </footer>
             
-            <div class="comments-template">
-                
-				<h2>What do you think?</h2>
-					<?php comments_template(); ?>
-			</div>
+			<?php comments_template(); ?>
             
         </article>
 		
 		<?php endwhile; ?>
-
-<?php endif; ?>
+        <?php endif; ?>
 
 <?php get_sidebar(); ?>	
 <?php get_footer(); ?>

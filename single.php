@@ -8,7 +8,7 @@
             
             <header class="article-header">
     
-                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
                 
                 <p class="postmetadata"><span class="date"><?php the_date(); ?></span> by <span class="author"><?php the_author(); ?></span></p>
                 
@@ -31,21 +31,20 @@
                 <p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
 
             </footer>
-            
-            <div class="comments-template">
-				<h2>What do you think?</h2>
-					<?php comments_template(); ?>
+
+			<?php comments_template(); ?>
+
 			</div>
             
         </article>
 
-<?php endwhile; ?>
+        <?php endwhile; ?>
 	
 	<div class="navigation">	
 		<?php previous_post_link('< %link') ?> <?php next_post_link(' %link >') ?>
 	</div>
 
-<?php endif; ?>
+    <?php endif; ?>
 
 <?php get_sidebar(); ?>	
 <?php get_footer(); ?>

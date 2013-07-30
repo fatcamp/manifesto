@@ -8,12 +8,12 @@
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
                 
                 <header class="article-header">
-    
-                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                
-                <p class="postmetadata"><span class="date"><?php the_date(); ?></span> by <span class="author"><?php the_author(); ?></span></p>
-                
-            </header>
+                    
+                    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                    
+                    <p class="postmetadata"><span class="date"><?php the_date(); ?></span> by <span class="author"><?php the_author(); ?></span></p>
+                    
+                </header>
             
                 <section class="post-content">
                 
@@ -41,7 +41,7 @@
             <?php endwhile; ?>
             
             <div class="navigation">
-            <?php posts_nav_link(); ?>
+                <?php posts_nav_link(); ?>
             </div>
             
             <?php endif; ?>
