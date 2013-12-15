@@ -1,17 +1,14 @@
 <?php
 
-//Some simple code for our widget-enabled sidebar
+//Load theme scripts
+function THEME_NAME_scripts() {
+    wp_enqueue_script('theme-scripts', get_template_directory_uri() . '/js/script.js', array('jquery'), '', true);
+}
+add_action('wp_enqueue_scripts', 'THEME_NAME_scripts');
+
+//Register widget-enabled sidebar
 if ( function_exists('register_sidebar') )
     register_sidebar();
-
-//Enable css media queries in older browsers
-// function mediaqueries() {
-//     wp_enqueue_script('mediaqueries',
-//      get_template_directory_uri() . '/js/libs/respond.min.js');          
-// }    
- 
-// add_action('wp_enqueue_scripts', 'mediaqueries');
-
 
 //Register area for custom menu
 function register_my_menu() {
