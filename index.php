@@ -11,7 +11,7 @@
                     
                     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                     
-                    <p class="postmetadata"><span class="date"><?php the_date(); ?></span> by <span class="author"><?php the_author(); ?></span></p>
+                    <p class="postmetadata"><span class="date"><?php the_time('F j, Y'); ?></span> by <span class="author"><?php the_author(); ?></span></p>
                     
                 </header>
             
