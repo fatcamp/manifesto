@@ -7,8 +7,18 @@ function THEME_NAME_scripts() {
 add_action('wp_enqueue_scripts', 'THEME_NAME_scripts');
 
 //Register widget-enabled sidebar
-if ( function_exists('register_sidebar') )
-    register_sidebar();
+add_action( 'widgets_init', 'THEME_NAME_widgets_init' );
+function THEME_NAME_widgets_init() {
+    register_sidebar( array(
+        'name' => __( 'Main Sidebar', 'THEME_NAME' ),
+        'id' => 'sidebar-1',
+        'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'THEME_NAME' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+	'after_widget'  => '</li>',
+	'before_title'  => '<h2 class="widgettitle">',
+	'after_title'   => '</h2>',
+    ) );
+}
 
 //Register area for custom menu
 function register_my_menu() {
